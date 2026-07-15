@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Math Stars</title>
+  <meta name="description" content="Practice the little 1x1: add, subtract, multiply and divide with numbers 1 to 10.">
+  <meta name="theme-color" content="#8b5cf6">
+  <link rel="manifest" href="manifest.json?v=3">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Math Stars">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="brand">🦉 Math&nbsp;Stars</div>
+      <div class="score">
+        <span class="chip ok" title="Correct">✔ <b id="right">0</b></span>
+        <span class="chip bad" title="Wrong">✘ <b id="wrong">0</b></span>
+        <span class="chip streak" title="Streak">🔥 <b id="streak">0</b></span>
+      </div>
+    </div>
+    <nav class="ops" id="ops">
+      <button class="op active" data-op="add" aria-label="Addition">+</button>
+      <button class="op" data-op="sub" aria-label="Subtraction">−</button>
+      <button class="op" data-op="mul" aria-label="Multiplication">×</button>
+      <button class="op" data-op="div" aria-label="Division">÷</button>
+      <button class="op" data-op="mix" aria-label="Mixed">🎲</button>
+    </nav>
+  </header>
+
+  <main>
+    <div id="card" class="card">
+      <div id="question">
+        <span id="qtext">3 + 4 =</span>
+        <span id="answer" class="empty">?</span>
+      </div>
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <div class="keypad" id="keypad">
+    <button class="key" data-k="1">1</button>
+    <button class="key" data-k="2">2</button>
+    <button class="key" data-k="3">3</button>
+    <button class="key" data-k="4">4</button>
+    <button class="key" data-k="5">5</button>
+    <button class="key" data-k="6">6</button>
+    <button class="key" data-k="7">7</button>
+    <button class="key" data-k="8">8</button>
+    <button class="key" data-k="9">9</button>
+    <button class="key act back" data-k="back" aria-label="Delete">⌫</button>
+    <button class="key" data-k="0">0</button>
+    <button class="key act ok" data-k="ok" aria-label="Check answer">✔</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
